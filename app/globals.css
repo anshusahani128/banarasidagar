@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #0f172a;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gradient {
+  background: linear-gradient(135deg, #ff7a18, #ffb347);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ea580c;
+}
+
+.btn-primary {
+  background: #ea580c;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #c2410c;
+}
