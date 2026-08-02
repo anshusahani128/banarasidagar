@@ -90,3 +90,33 @@ export default function Footer() {
     </footer>
   );
 }
+export default function GoogleMap() {
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6">
+
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-orange-600">
+            Find Us
+          </h2>
+          <p className="text-gray-600 mt-2">
+            Visit Banarasi Dagar or contact us for your next journey.
+          </p>
+        </div>
+
+        <div className="overflow-hidden rounded-2xl shadow-lg border">
+          <iframe
+            title="Banarasi Dagar Location"
+            src="https://www.google.com/maps?q=Kashi+Vishwanath+Temple,+Varanasi&output=embed"
+            width="100%"
+            height="450"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-full"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
