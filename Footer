@@ -1,0 +1,92 @@
+import Link from "next/link";
+
+export default function Footer() {
+  return (
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-4 gap-10">
+
+        {/* Brand */}
+        <div>
+          <h2 className="text-2xl font-bold text-orange-500">
+            🛕 Banarasi Dagar
+          </h2>
+          <p className="mt-4 text-gray-300">
+            Discover the spiritual beauty of Varanasi with comfortable travel,
+            hotel bookings, temple visits, taxi services, and customized tour
+            packages.
+          </p>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-gray-300">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/packages">Packages</Link></li>
+            <li><Link href="/services">Services</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+          <ul className="space-y-2 text-gray-300">
+            <li>🛕 Temple Visits</li>
+            <li>🚖 Taxi Service</li>
+            <li>🏨 Hotel Booking</li>
+            <li>🚤 Boat Ride</li>
+            <li>✈️ Airport Pickup</li>
+            <li>🚉 Railway Pickup</li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Contact</h3>
+
+          <p className="text-gray-300">
+            <strong>Owner:</strong> Anshu Sahani
+          </p>
+
+          <p className="mt-2">
+            📞 <a href="tel:+919794107176">+91 9794107176</a>
+          </p>
+
+          <p className="mt-2">
+            📧{" "}
+            <a href="mailto:anshusahani128@gmail.com">
+              anshusahani128@gmail.com
+            </a>
+          </p>
+
+          <p className="mt-2">
+            📸{" "}
+            <a
+              href="https://instagram.com/banarasidagar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @banarasidagar
+            </a>
+          </p>
+
+          <a
+            href="https://wa.me/919794107176"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-5 bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full font-semibold transition"
+          >
+            Book on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div className="border-t border-slate-700 py-5 text-center text-sm text-gray-400">
+        © {new Date().getFullYear()} Banarasi Dagar. All Rights Reserved.
+      </div>
+    </footer>
+  );
+}
