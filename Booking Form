@@ -1,0 +1,74 @@
+"use client";
+
+import { useState } from "react";
+
+export default function BookingForm() {
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    packageName: "Banarasi Yatra",
+    persons: 1,
+    travelDate: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const bookOnWhatsApp = () => {
+    const text = `
+*New Booking Request*
+
+Name: ${form.name}
+Phone: ${form.phone}
+Email: ${form.email}
+Package: ${form.packageName}
+Persons: ${form.persons}
+Travel Date: ${form.travelDate}
+
+Message:
+${form.message}
+`;
+
+    window.open(
+      `https://wa.me/919794107176?text=${encodeURIComponent(text)}`,
+      "_blank"
+    );
+  };
+
+  return (
+    <section className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+      <h2 className="text-3xl font-bold text-center text-orange-600 mb-6">
+        Book Your Banarasi Yatra
+      </h2>
+
+      <div className="grid md:grid-cols-2 gap-5">
+        <input
+          name="name"
+          placeholder="Full Name"
+          onChange={handleChange}
+          className="border rounded-lg p-3"
+        />
+
+        <input
+          name="phone"
+          placeholder="Mobile Number"
+          onChange={handleChange}
+          className="border rounded-lg p-3"
+        />
+
+        <input
+          name="email"
+          type="email"
+          placeholder="Email Address"
+          onChange={handleChange}
+          className="border rounded-lg p-3"
+        />
+
+        <select
+          name="packageName"
+          onChange={
